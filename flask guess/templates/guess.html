@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Gotu:300,200,200,400" rel="stylesheet">
+
+   <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="app.css">
+    <title>Guess secret number from 1 to 10 </title>
+</head>
+
+<body>
+<div class="container">
+ <div class="container">
+      <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4"> Welcome to guessing game </h1>
+            <h2>Rules are simple - just guess my secret number from 1 to 10</h2>
+          </div>
+      </div>
+</div>
+<div class="container">
+{% if answer %}
+    <h2>Your answer is {{ answer }} - {{ emoji }}</h2>
+    {% if answer_ok %}
+        <h3> Well done my friend!</h3>
+        <br>
+        <br>
+    {% endif %}
+{% endif %}
+
+{% if not answer_ok %}
+    <form action="/game" method="POST">
+        <label> What is my secret number? : <input type="number" name="teasing" class="btn btn-outline-primary"></label>
+        <input type="submit" name="Próbuję!">
+    </form>
+{% endif %}
+
+{% if answer_ok %}
+    <p><a href="/game"> I actually like it, one more time! </a></p>
+{% endif %}
+
+{% if answer_ok %}
+    <p><a href="/"> I like it so much that my friends wanna play it! </a></p>
+{% endif %}
+</div>
+</body>
+</html>
