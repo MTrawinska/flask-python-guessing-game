@@ -8,4 +8,4 @@ Just simple and crisp project. Please do not copy or share without contacting.
 
 Flowchart of steps
 
-[Guess](https://github.com/MTrawinska/flask-python-guessing-game/blob/master/zgaduj.png)
+![Guess](https://github.com/MTrawinska/flask-python-guessing-game/blob/master/zgaduj.png)
